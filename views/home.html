@@ -1,0 +1,18 @@
+<div class='container' ng-controller="homeCtrl">
+    <table datatable="ng" class="table row-border table-striped table-hover compact display">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone No.</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="contact in contacts">
+            <td>{{contact.name}}</td>
+            <td>{{contact.address}}</td>
+            <td>{{contact.phone}}</td>
+          </tr>
+        </tbody>
+    </table>
+    </div>

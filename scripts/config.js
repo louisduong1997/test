@@ -2,12 +2,12 @@ function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
     $stateProvider
        .state('home', {
-            url: "/home",
-            templateUrl: "views/home.html"
+            url: "/home.html",
+            templateUrl: "/home.html"
         })
         .state('add', {
-            url: "/add",
-            templateUrl: "views/add.html"
+            url: "/add.html",
+            templateUrl: "/add.html"
         })
 }
 function addContactCtrl($scope, $state, $firebaseObject) {
