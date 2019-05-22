@@ -11,7 +11,7 @@ function config($stateProvider, $urlRouterProvider) {
         })
 }
 function addContactCtrl($scope, $state, $firebaseObject) {
-    let ref = firebase.database().ref('Contacts');
+    let ref = firebase.database().ref('Users');
     let pushKey = ref.push().key;
     $scope.formData = $firebaseObject(ref.child(pushKey));
     $scope.add = function(){

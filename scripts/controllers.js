@@ -1,6 +1,6 @@
 function addContactCtrl($scope, $state, $firebaseObject) {
 
-    let ref = firebase.database().ref('Contacts/');
+    let ref = firebase.database().ref('Users/');
     let pushKey = ref.push().key;
     $scope.formData = $firebaseObject(ref.child(pushKey));
 
@@ -10,7 +10,7 @@ function addContactCtrl($scope, $state, $firebaseObject) {
         });
     }
 };function homeCtrl($scope, $firebaseObject){
-    const ref = firebase.database().ref('Contacts');
+    const ref = firebase.database().ref('Users');
     $scope.contacts = $firebaseObject(ref);
 }
 

@@ -30,56 +30,38 @@
        </ul>
     </div>
  </nav>
- <div>
-     <div class='container' ng-controller="homeCtrl">
-        <table datatable="ng" class="table row-border table-striped table-hover compact display">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Phone No.</th>
-            </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="user in Users">
-                <td>{{user.name}}</td>
-                <td>{{user.address}}</td>
-                <td>{{user.phone}}</td>
-              </tr>
-            </tbody>
-        </table>
-        </div>   
-           <!-- <div  _ngcontent-c13="" class="well ng-star-inserted">
-          <div _ngcontent-c13="" class="ng-star-inserted">
-            <h2 _ngcontent-c13="" class="font-weight-bold text-center mt-0">
-              Danh sách lịch hẹn</h2>
-          <table class="table table-hover">
-              <thead>
-                  <tr>
-                    <th scope="col">Stt</th>
-                        <th scope="col">Tên BS</th>
-                        <th scope="col">Chuyên Khoa</th>
-                        <th scope="col">Ngày Hẹn</th>
-                        <th scope="col">Nội Dung ghi chú</th>
-                        <th>Chọn <input type="checkbox" class="check" id="checkAll" ></th>              
-                        <th scope="col">Hành động</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr ng-repeat="user in users | orderBy : sortColumn" class="ng-scope">
-                    <th scope="row" class="ng-binding">1</th>
-                        <td >{{user.name}}</td>
-                        <td>{{user.address}}</td>
-                        <td>{{user.add}}</td>
-                        <td >{{user.gioitinh}}</td>
-                        <td><input type="checkbox" class="check"></td>
-                        <td>
-                          <a ui-sref="PhieuDangKy"  type="button" class="btn btn-primary ">Sửa</a>
-                          <a ui-sref="PhieuDangKy"  type="button" class="btn btn-primary ">Xóa</a>
-                        </td>
-                  </tr>
+ <div ui-view>
+  <div class="container" ng-controller="addContactCtrl">
+    <form ng-submit="add()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" ng-model="formData.name">
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control" ng-model="formData.address">
+        </div>
+        <div class="form-group">
+            <label>Phone No.</label>
+            <input type="text" class="form-control" ng-model="formData.phone">
+        </div>
+        <div class="form-group">
+            <label>Phone No.</label>
+            <input type="text" class="form-control" ng-model="formData.1">
+        </div>
+        <div class="form-group">
+            <label>Phone No.</label>
+            <input type="text" class="form-control" ng-model="formData.2">
+        </div>
+        <div class="form-group">
+            <label>Phone No.</label>
+            <input type="text" class="form-control" ng-model="formData.3">
+        </div>
+        <button class='btn btn-default' type="submit">Save</button>
+    </form>
+    </div>
 
- </div> -->
+ </div>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
